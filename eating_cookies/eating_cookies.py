@@ -13,10 +13,12 @@ def eating_cookies(n, cache=None):
   cookie_methods = 0
 
   for i in range(1, 4):
-    print(i)
+    # print(i)
+    cookie_methods += eating_cookies(n - i)
+
 
   return cookie_methods
-eating_cookies(3)
+print(eating_cookies(25))
 if __name__ == "__main__":
   if len(sys.argv) > 1:
     num_cookies = int(sys.argv[1])
